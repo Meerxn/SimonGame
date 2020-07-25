@@ -31,7 +31,7 @@ $(document).on("keypress",function(){
   
  
 function nextSequence(){
-    
+    usrPattern = [];
     level++;
     $("#level-title").text("Level " + level);
     var randNum = Math.floor(Math.random()*(4)); 
@@ -39,7 +39,7 @@ function nextSequence(){
     pattern.push(randColor);
     $("#" + randColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randColor);
-    usrPattern = [];
+    
 
   }
   function checkAns (lvl){
@@ -60,6 +60,7 @@ function nextSequence(){
       } else {
   
       wrong();
+      restart();
   
       }
   
@@ -82,6 +83,12 @@ function nextSequence(){
     setTimeout(function(){  $("body").removeClass("game-over");}  , 200);
     $("#level-title").text("Game over press any key to restart");
 
+  }
+  function restart(){
+      level = 0 ; 
+      pattern = [];
+
+      started = false;
   }
   
   
