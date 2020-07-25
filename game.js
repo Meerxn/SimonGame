@@ -31,6 +31,7 @@ $(document).on("keypress click tap",function(){
   
  
 function nextSequence(){
+    // recursive
     usrPattern = [];
     level++;
     $("#level-title").text("Level " + level);
