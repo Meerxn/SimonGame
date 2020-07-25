@@ -5,7 +5,7 @@ var level = 0;
 
 var  buttons = new Array("red", "blue", "green","yellow");
 
-$(document).on("keypress",function(){
+$(document).on("keypress click touchstart",function(){
  if (started === false){
     
     started = true;
