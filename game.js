@@ -46,7 +46,7 @@ function nextSequence(){
     
     if ( pattern[lvl] ===  usrPattern [lvl]) {
 
-        alert("s");
+        
   
         if (usrPattern.length ===  pattern.length){
   
